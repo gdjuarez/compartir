@@ -16,12 +16,11 @@
 
     <!--fontawesome icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-    <title>Prestamos</title>
+    <title>compartir</title>
     <!-- jquery-->
     <script src="lib/jquery.js"></script>
 
     <link rel="stylesheet" href="stylefondo.css">
-
 
 </head>
 
@@ -46,53 +45,12 @@
                 <a class="navbar-brand" href="#"></a>
                 <h1>Compartir Archivos</h1>
 
-                <!-- Trigger the modal with a button -->
-                <button type="button" class="btn btn-dark " data-toggle="modal" data-target="#myModal_sesion"
-                    id="inicio_sesion" title="Ingresar"> Iniciar sesion </button>
+                <form class="form-inline" action="subir_archivo.php" method="post">
+                    <button class="btn btn-dark btn-sm" type="submit">entrar</button>
+                </form>
             </nav>
 
         </div>
-
-        <!-- ************************* M O D A L ***************************     -->
-        <!-- Trigger the modal with a button 
-        <button type="button" class="btn btn-info " data-toggle="modal" data-target="#myModal_sesion" id="inicio_sesion"
-            title="buscar"><i class="fas fa-search-plus"></i> Iniciar session </button>    -->
-
-        <!-- Modal -->
-        <div class="modal fade" id="myModal_sesion" role="dialog">
-            <div class="modal-dialog modal-sm">
-
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title"></h5>
-                    </div>
-
-                    <div class="modal-body">
-                        <form action="conexion/login.php" method="post">
-                            <div class="form-group">
-                                <label>Usuario:</label>
-                                <input type="text" class="form-control" id="user" name="user" placeholder="Usuario..."
-                                    maxlength="20" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Contraseña:</label>
-                                <input type="password" class="form-control" id="pass" name="pass"
-                                    placeholder="contraseña..." maxlength="20" required>
-                            </div>
-                            <button type="submit" class="btn btn-info btn-block btn-round">Ingresar</button>
-                        </form>
-                        <!-- <button type="button" class="close" id="cerrarA" data-dismiss="modal">&times;</button> -->
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">cerrar</button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <!-- ********************************************************************************     -->
-
 
         <div class="container bg-light border rounded">
             <br>
