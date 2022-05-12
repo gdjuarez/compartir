@@ -44,7 +44,7 @@
                 <!-- Navbar content -->
                 <img src="img/escudo1.png" class="rounded " style="width:5%" alt="Responsive image">
                 <a class="navbar-brand" href="#"></a>
-                <h1>Prestamos Dispositivos Tecnologicos</h1>
+                <h1>Compartir Archivos</h1>
 
                 <!-- Trigger the modal with a button -->
                 <button type="button" class="btn btn-dark " data-toggle="modal" data-target="#myModal_sesion"
