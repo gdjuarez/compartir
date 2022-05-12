@@ -5,16 +5,9 @@ include("../conexion/conexion.php");
 //NO MUESTRA ERROR al cargar
 error_reporting(error_reporting() & ~E_NOTICE);
 
-$curso = '';
-$asignatura='';
-$mensaje = '';
-$autor = '';   
-
-$curso = $_POST['curso'];
-$asignatura = $_POST['asignatura'];
 
 // consulta a la tabla usuarios
-$consulta = "SELECT curso,asignatura,autor,titulo,mensaje FROM mensajes where curso='$curso'and asignatura='$asignatura'"; 
+$consulta = "SELECT curso,asignatura,autor,titulo,mensaje FROM mensajes"; 
 //echo $consulta;
 $sql = mysqli_query($miConexion,$consulta); 
 // cantidad de registros
@@ -26,24 +19,14 @@ $dyn_table='<table id="Tabla" class="table table-striped table-sm">';
 //lleno dinamicamente la table
 while($row = mysqli_fetch_array($sql,MYSQLI_ASSOC)){  	
    
-    $curso = $row["curso"];
-	$$asignatura = $row["asignatura"]; 
-	$autor = $row["autor"]; 
-	$titulo = $row["titulo"]; 
+   	$titulo = $row["titulo"]; 
 	$mensaje = $row["mensaje"];
 	
 	$dyn_table.="<tr>";
-	$dyn_table.="<th>" . "Curso" ."</th>";
-	$dyn_table.="<th>" . "Asignatura ". "</th>";
-	$dyn_table.="<th>" . "Autor ". "</th>";
-	$dyn_table.="<th>" . "Titulo ". "</th>";		
+	$dyn_table.="<th>" . "Titulo ". "</th>";
+	$dyn_table.="<th>" . "Mensaje ". "</th>";			
 	$dyn_table.="</tr><tr>";
-  	$dyn_table.="<td>" . $curso ."</td>";
-	$dyn_table.="<td>" . $asignatura ."</td>";
-	$dyn_table.="<td>" . $autor."</td>";
-	$dyn_table.="<td>" . $titulo."</td>";
-	$dyn_table.="</tr><tr>";
-	$dyn_table.="<th>" . "Mensaje ". "</th>";	
+  	$dyn_table.="<td>" . $titulo."</td>";	
 	$dyn_table.="<td>" . $mensaje ."</td>";
 		
 }

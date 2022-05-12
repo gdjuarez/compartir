@@ -1,7 +1,6 @@
 <?php 
 //
- ?>
- 
+ ?> 
 
 <!doctype html>
 <html lang="en">
@@ -19,7 +18,6 @@
     <title>compartir</title>
     <!-- jquery-->
     <script src="lib/jquery.js"></script>
-
     <link rel="stylesheet" href="stylefondo.css">
 
 </head>
@@ -45,7 +43,7 @@
                 <a class="navbar-brand" href="#"></a>
                 <h1>Compartir Archivos</h1>
 
-                <form class="form-inline" action="subir_archivo.php" method="post">
+                <form class="form-inline" action="subir.php" method="post">
                     <button class="btn btn-dark btn-sm" type="submit">entrar</button>
                 </form>
             </nav>
@@ -56,6 +54,9 @@
             <br>
             <div class="row">
                 <div class="col-sm-4">
+                <form class="form-inline" action="descargar/frmDescargar.php" method="post">
+                    <button class="btn btn-dark btn-sm" type="submit">descargar</button>
+                </form>
                 </div>
 
                 <div class="col-sm-4">

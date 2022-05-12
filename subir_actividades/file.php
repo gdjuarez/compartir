@@ -4,7 +4,7 @@
 
   $carpeta=$_POST['asignatura'];
   //ECHO "Subido a la asignatura: ".$carpeta;
-  $direccion= "../actividades/contenidos1a/".$carpeta."/";
+  $direccion= "../actividades/contenidos/nticx/";
   //echo $direccion;
   
 if ($_FILES['archivo']["error"] > 0)
@@ -52,7 +52,8 @@ else
 
             <div class="col-md-8">  
               <?php echo  $dyn_table; ?>
-              <form action="subir1a.php" method="post" >
+            
+              <form action="subir.php" method="post" >
              
                 <input type="submit" value="volver"></input>
               </form>

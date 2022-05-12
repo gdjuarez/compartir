@@ -12,6 +12,10 @@ if($_SESSION['logged'] == 'yes')
 	//NO MUESTRA ERROR al cargar
 error_reporting(error_reporting() & ~E_NOTICE);
 
+$carpeta='';
+$carpetarepo='';
+
+
 if(empty($_POST['carpeta'])){
 
    $carpeta="Seleccione Asignatura";
@@ -109,7 +113,7 @@ function listar_repositorio($carpetarepo){
   		<form action="../menu.php" method="POST">
 		    <input name="Enviar" type="submit" value="volver al menu" class="btn btn-warning btn-block" />
 		 </form> 
-	  <a href="#" class="navbar-brand"><h3>Subir Actividades a Primero A</h3></a>
+	  <a href="#" class="navbar-brand"><h3>Subir Actividades </h3></a>
 	    <form action= "../destruir.php" method="POST"  class="form-inline">
 	       <button class="btn btn-outline-danger sm" type="submit">usuario: <?php echo $_SESSION['user']?> <br>cerrar-sesion</button>
   	</form>
@@ -136,18 +140,8 @@ function listar_repositorio($carpetarepo){
 							<div class="list-group" >		   		 
 					 			<button type="button" class="list-group-item list-group-item-info">Subir Actividades</button>
 					         </div>
-					         <form action="file1a.php" method="post" enctype="multipart/form-data" >								
-								<p><select class="form-control input-sm" id="asignatura" name="asignatura" title='Seleccione Asignatura.'>
-										<option selected value="<?php echo $carpeta ?>"><?php echo $carpeta ?></option>	
-										<option value="Ciencias Naturales">Ciencias Naturales</option>					
-										<option value="Ciencias Sociales">Ciencias Sociales</option>
-										<option value="Construccion de Ciudadania">Construcción de Ciudadania</option>
-										<option value="Educacion Artistica">Educación Artística</option>	
-										<option value="Educacion Fisica">Educación Fisica</option>										
-										<option value="Ingles">Inglés</option>					
-										<option value="Matematica">Matemática</option>
-										<option value="Practicas del Lenguaje">Prácticas del Lenguaje</option>												
-								</select></p>
+					         <form action="file.php" method="post" enctype="multipart/form-data" >								
+								<input type="text" value="nticx" id="asignatura" name="asignatura" hidden></input>
 								<input type="file" name="archivo" id="archivo"class="p-2 mb-4"></input>
 								<input type="submit" value="Subir" class="p-2 mb-4"  id="upload"></input>
 								<div class="w-50 p-1">
@@ -162,18 +156,7 @@ function listar_repositorio($carpetarepo){
 					 			<button type="button" class="list-group-item list-group-item-success ">Ver</button>
 					         </div>
 							 <form action="" method="post" class="p-2 mb-4">								
-								<p><select class="form-control input-sm" id="carpeta" name="carpeta" title='Seleccione Asignatura.'>
-										<option selected value="<?php echo $carpeta ?>"><?php echo $carpeta ?></option>
-										<option value="Ciencias Naturales">Ciencias Naturales</option>					
-										<option value="Ciencias Sociales">Ciencias Sociales</option>
-										<option value="Construccion de Ciudadania">Construcción de Ciudadania</option>
-										<option value="Educacion Artistica">Educación Artística</option>	
-										<option value="Educacion Fisica">Educación Fisica</option>										
-										<option value="Ingles">Inglés</option>					
-										<option value="Matematica">Matemática</option>
-										<option value="Practicas del Lenguaje">Prácticas del Lenguaje</option>												
-								</select></p>
-							
+								<input type="text" value="nticx" id="carpeta" name="carpeta" hidden></input>
 								<input type="submit" value="Ver contenido " class="p-2 mb-4"></input>
 							</form>
 									
@@ -181,17 +164,22 @@ function listar_repositorio($carpetarepo){
                         <?php
 								// listado de archivos 
                          //$carpeta=$_POST['carpeta'];
+
+						 if(isset($_POST['carpeta'])){
+						 
                         
-                         if($_POST['carpeta']=='Seleccione Asignatura'){
-										 //no muestra contenido
-										// echo $carpeta;
-                         	}else{
-					
-								$direccion= "../actividades/contenidos1a/".$carpeta."/";  
-													
-								echo "Archivos de: ".$carpeta;         
-								echo listar_archivos($direccion);
+								if($_POST['carpeta']!='nticx'){
+												//no muestra contenido
+												// echo $carpeta;
+									}else{
+							
+										$direccion= "../actividades/contenidos/nticx/";  
+															
+										echo "Archivos de: ".$carpeta;         
+										echo listar_archivos($direccion);
                         	}
+
+						}
                         ?>
 
 						</div>	
@@ -200,18 +188,7 @@ function listar_repositorio($carpetarepo){
 					 			<button type="button" class="list-group-item list-group-item-warning ">Repositorio</button>
 					         </div>
 						<form action="" method="post" class="p-2 mb-4">								
-								<p><select class="form-control input-sm" id="carpetarepo" name="carpetarepo" title='Seleccione Asignatura.'>
-										<option selected value="<?php echo $carpetarepo ?>"><?php echo $carpetarepo ?></option>
-										<option value="Ciencias Naturales">Ciencias Naturales</option>					
-										<option value="Ciencias Sociales">Ciencias Sociales</option>
-										<option value="Construccion de Ciudadania">Construcción de Ciudadania</option>
-										<option value="Educacion Artistica">Educación Artística</option>	
-										<option value="Educacion Fisica">Educación Fisica</option>										
-										<option value="Ingles">Inglés</option>					
-										<option value="Matematica">Matemática</option>
-										<option value="Practicas del Lenguaje">Prácticas del Lenguaje</option>												
-								</select></p>
-							
+								<input type="text" value="nticx" id="carpetarepo" name="carpetarepo" hidden></input>
 								<input type="submit" value="Ver Repositorio " class="p-2 mb-4"></input>
 							</form>
 
@@ -219,15 +196,17 @@ function listar_repositorio($carpetarepo){
 								// listado de REPOSITORIO
                         // $carpeta=$_POST['carpetarepo'];
                         
-                         if($_POST['carpetarepo']=='Seleccione Asignatura'){
+						 if(isset($_POST['carpeta'])){
+                         if($_POST['carpetarepo']!='nticx'){
                          				//no muestra contenido
                          	}else{
 					
-								$direccion= "../actividades/contenidos1a/".$carpetarepo."/repositorio";  
+								$direccion= "../actividades/contenidos/nticx/repositorio";  
 													
 								//echo "Archivos de: ".$carpetarepo;         
 								echo listar_repositorio($direccion);
                         	}
+						}
                         ?>
 						</div>
 					</div>
