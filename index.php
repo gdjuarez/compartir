@@ -1,6 +1,6 @@
 <?php 
 //
- ?> 
+ ?>
 
 <!doctype html>
 <html lang="en">
@@ -24,49 +24,81 @@
 
 <body>
     <div class="container container-sm">
-
         <div class="banner  rounded" style="background-color: #FF5733 ;">
             <div class="row">
                 <div class="col-lg-2">
-                  
+
                 </div>
                 <div class="col-lg-8">
                     <h1 class="text-white text-center">E.E.S n°1</h1>
                 </div>
                 <div class="col-lg-2">
-                   
+
                 </div>
             </div>
-            <nav class="navbar navbar-light bg-white border rounded">
-                <!-- Navbar content -->
-                <img src="img/escudo1.png" class="rounded " style="width:5%" alt="Responsive image">
-                <a class="navbar-brand" href="#"></a>
-                <h1>Compartir Archivos</h1>
+        </div>
+        <div class="banner  rounded bg-light">
+            <div class="row">
+                <div class="col-lg-2">
+                    <img src="img/escudo1.png" class="rounded " style="width:30%" alt="Responsive image">
+                </div>
+                <div class="col-lg-8">
+                    <h1 class="text-center">Compartir Archivos</h1>
+                </div>
+                <div class="col-lg-2">
 
-                <form class="form-inline" action="subir.php" method="post">
-                    <button class="btn btn-dark btn-sm" type="submit">entrar</button>
-                </form>
-            </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container bg-light rounded">
+
+        <div class="row">
+            <div class="col-md-6">
+
+                <table class="table">
+
+                    <th class="table-secondary">Descargar Archivo</th>
+
+                    <tr class="table-success">
+                        <td><a href="recibir_actividades/frmDescargarAct.php" class="p-4">
+                                <i class="p-4 fas fa-caret-square-down"></i>DESCARGAR</a></td>
+                    </tr>
+
+                </table>
+
+            </div>
+            <div class="col-md-6">
+
+                <table class="table">
+
+                    <th class="table-secondary">Presentar Archivos</th>
+
+                    <tr class="table-primary">
+                        <td><a href="adminalumnos.php" class="p-4">
+                                <i class="p-4 fas fa-angle-double-up"></i>SUBIR</a></td>
+                    </tr>
+
+                </table>
+
+            </div>
 
         </div>
 
-        <div class="container bg-light border rounded">
+
+        <div class="container bg-light  rounded">
             <br>
             <div class="row">
                 <div class="col-sm-4">
-                <form class="form-inline" action="descargar/frmDescargar.php" method="post">
-                    <button class="btn btn-dark btn-sm" type="submit">descargar</button>
-                </form>
+
                 </div>
 
                 <div class="col-sm-4">
 
                     <div class="comunicado bg-light border rounded text-center">
-                    <img src="img/escudo1.png" class="rounded" style="width:85%" alt="Responsive image">
-                       
+                        <img src="img/escudo1.png" class="rounded" style="width:85%" alt="Responsive image">
                     </div>
-
-
 
                     <div class="text-white rounded" style="background-color: #395586;">
                         <p align="center">Escuela de Educación Secundaria n°1</p>

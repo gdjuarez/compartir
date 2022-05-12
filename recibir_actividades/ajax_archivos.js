@@ -5,20 +5,7 @@ $(document).on("ready",function(){
 	
 		//alert("click!!"+folder);
 						
-		//--------- ENVIO LOS DATOS  POR $_POST[''] ----A J A X -------
-		$.ajax({
-			type: 'POST',
-			url: 'gridmensajes.php',
-			data: {}, //asi paso el array a php
-					success: function(data){ 
-					$('#resultados').empty();
-					$('#resultados').append(data); 
-					console.log(data);
-				}
-					
-		});
-
-		//--------- ENVIO LOS DATOS  POR $_POST[''] ----A J A X -------
+			//--------- ENVIO LOS DATOS  POR $_POST[''] ----A J A X -------
 		$.ajax({
 			type: 'POST',
 			url: 'listar_archivos.php',

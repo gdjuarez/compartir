@@ -15,7 +15,7 @@
     if(is_dir($carpeta)){
       if($dir = opendir($carpeta)){
         while(($archivo = readdir($dir)) !== false){
-          if($archivo != '.' && $archivo != '..' && $archivo != 'repositorio' ){
+          if($archivo != '.' && $archivo != '..' ){
              $cantidad=$cantidad+1;
              $dyn_table= "<table id='Tablalista' class='table table-striped'>";
              $dyn_table.="<tr><td><a class='btn btn-outline-primary' href='".$carpeta.'/'.$archivo."'>".$archivo." "."<i class='fas fa-arrow-circle-down'></i></a><td>";
@@ -28,10 +28,8 @@
       }
     }
   }
-  // echo listar_archivos('documentos');
 
-  
-  echo "Archivos de Nticx";         
+
   echo listar_archivos($folder);
 
 ?>

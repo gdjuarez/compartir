@@ -21,57 +21,66 @@
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
    
     <script src="../Jquery/jquery.js"></script> 
-    <script src="ajax_mensaje_archivos.js"></script> 
+    <script src="ajax_archivos.js"></script> 
 	  
    
   </head>
  
    <header>
-     <div class='container'>  
-        <nav class="navbar navbar-dark bg-dark rounded">
-    <!-- Navbar content -->
-        <form action="../menupublico.php" method="POST">
-          <input name="Enviar" type="submit" value="volver al menu" class="btn btn-warning btn-block" />
-       </form> 
-      <a href="#" class="navbar-brand"><h3>Actividades 4° Agro </h3></a>
-        <form action= "../destruir.php" method="POST"  class="form-inline">
-           <button class="btn btn-outline-danger sm" type="submit">salir</button>
-      </form>
-      </nav>
+   <div class="container container-sm">
+
+<div class="banner  rounded" style="background-color: #FF5733 ;">
+    <div class="row">
+        <div class="col-lg-2">
+          
+        </div>
+        <div class="col-lg-8">
+            <h1 class="text-white text-center">E.E.S n°1</h1>
+        </div>
+        <div class="col-lg-2">
+           
+        </div>
     </div>
+    <nav class="navbar navbar-light bg-white border rounded">
+        <!-- Navbar content -->
+        <img src="../img/escudo1.png" class="rounded " style="width:5%" alt="Responsive image">
+        <a class="navbar-brand" href="#"></a>
+        <h1>Compartir Archivos</h1>
+
+        <form class="form-inline" action="../index.php" method="post">
+            <button class="btn btn-dark btn-sm" type="submit">volver</button>
+        </form>
+    </nav>
+
+</div>
+
+   
  </header>
 
  <body>
-  <hr>      
-  <div class="container">
+  
+  <div class="container text-center">
    	 	<div class="row">
-   	 		 <div class="col-md-5">      
-           <div class="list-group" >          
-              <button type="button" class="list-group-item list-group-item-secondary ">Mensajes del Docente: </button>
-          </div> 
-              <!-- AQUI SE DESPLEGARA NUESTRA TABLA DE CONSULTA -->
-              <div id="resultados"></div>             
-        			
-			   </div>
-
-			   <div class="col-md-7">
-          <div class="p-3 mb-4 bg-light text-dark border border-secondary">
+          <div class="col-md-2"></div>
+   	 		
+			   <div class="col-md-8">
+               <div class="p-3 mb-4 bg-light text-dark border border-secondary">
                 <div class="list-group" >          
                  <button type="button" class="list-group-item list-group-item-success ">Descargar Actividades </button>
                 </div>               
-                <input type="text" id="direccion" value="../actividades/contenidos/nticx" hidden></input>               
+                <input type="text" id="direccion" value="../archivos" hidden></input>               
               
                
                     <div id="resultado_archivos" >  </div>
                 </div>
 			      </div>
 			   </div>
-         <hr>
-			<footer>
-        <small>&copy; Copyright 2020, GDJuarez</small>
-			</footer>
-  	 </div>	
+             <hr>
+               <footer>
+            <small>&copy; Copyright 2020, GDJuarez</small>
+               </footer>
+  	      </div>	
 	
-  </div> 
+</div> 
    </body>
 </html>
