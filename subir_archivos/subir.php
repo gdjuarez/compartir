@@ -38,22 +38,26 @@ $carpeta='archivos';
 
 
 ?>
-<!DOCTYPE html>
-<html>
+
+
+<!doctype html>
+<html lang="en">
 
 <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <title>Subir </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-
-    <script src="../Jquery/jquery.js"></script>
+    <!--fontawesome icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <title>subir</title>
+    <!-- jquery-->
+    <script src="lib/jquery.js"></script>
+    <link rel="stylesheet" href="stylefondo.css">
+    
     <script>
     $(document).on("ready", function() {
         //alert ("fuunciona ok");
