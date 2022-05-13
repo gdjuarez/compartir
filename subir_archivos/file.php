@@ -2,9 +2,7 @@
 //NO MUESTRA ERROR al cargar
   error_reporting(error_reporting() & ~E_NOTICE);
 
-  $carpeta=$_POST['asignatura'];
-  //ECHO "Subido a la asignatura: ".$carpeta;
-  $direccion= "../actividades/contenidos/nticx/";
+  $direccion= "../archivos/";
   //echo $direccion;
   
 if ($_FILES['archivo']["error"] > 0)
@@ -19,7 +17,6 @@ else
   {
 
     $dyn_table= "<table id='TablaOk'class='table table-striped'>";
-    $dyn_table.="<th>"."Subido a la asignatura: ".$carpeta."</th>"; 
     $dyn_table.="<tr><td>" . "Nombre: ". $_FILES['archivo']['name']."</td></tr>";    
     $dyn_table.="<tr><td>" . "Tipo: " .$_FILES['archivo']['type']."</td></tr>";  
     $dyn_table.="<tr><td>" . "Tamaño: " .($_FILES["archivo"]["size"] / 1024)."</td></tr>";     

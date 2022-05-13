@@ -53,7 +53,6 @@
     </div>
 
     <div class="container bg-light rounded">
-
         <div class="row">
             <div class="col-md-6">
 
@@ -62,7 +61,7 @@
                     <th class="table-secondary">Descargar Archivo</th>
 
                     <tr class="table-success">
-                        <td><a href="recibir_actividades/frmDescargarAct.php" class="p-4">
+                        <td><a href="recibir_archivos/frmDescargarAct.php" class="p-4">
                                 <i class="p-4 fas fa-caret-square-down"></i>DESCARGAR</a></td>
                     </tr>
 
@@ -76,7 +75,7 @@
                     <th class="table-secondary">Presentar Archivos</th>
 
                     <tr class="table-primary">
-                        <td><a href="adminalumnos.php" class="p-4">
+                        <td><a href="subir_archivos/subir.php" class="p-4">
                                 <i class="p-4 fas fa-angle-double-up"></i>SUBIR</a></td>
                     </tr>
 
