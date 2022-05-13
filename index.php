@@ -54,35 +54,18 @@
 
     <div class="container bg-light rounded">
         <div class="row">
-            <div class="col-md-6">
-
-                <table class="table">
-
-                    <th class="table-secondary">Descargar Archivo</th>
-
-                    <tr class="table-success">
-                        <td><a href="recibir_archivos/frmDescargarAct.php" class="p-4">
-                                <i class="p-4 fas fa-caret-square-down"></i>DESCARGAR</a></td>
-                    </tr>
-
-                </table>
-
+            <div class="col-md-3"></div>
+            <div class="col-md-3">
+                <form class="form-inline" action="recibir_archivos/frmDescargarAct.php" method="post">
+                    <button class="btn btn-info btn-lg" type="submit">DESCARGAR</button>
+                </form>
             </div>
-            <div class="col-md-6">
-
-                <table class="table">
-
-                    <th class="table-secondary">Presentar Archivos</th>
-
-                    <tr class="table-primary">
-                        <td><a href="subir_archivos/subir.php" class="p-4">
-                                <i class="p-4 fas fa-angle-double-up"></i>SUBIR</a></td>
-                    </tr>
-
-                </table>
-
+            <div class="col-md-3">
+                <form class="form-inline" action="subir_archivos/subir.php" method="post">
+                        <button class="btn btn-outline-danger btn-lg" type="submit">SUBIR</button>
+                </form>
             </div>
-
+            <div class="col-md-3"></div>
         </div>
 
 

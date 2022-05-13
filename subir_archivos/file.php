@@ -32,16 +32,27 @@ else
 
 
  ?>
- <!DOCTYPE html>
-<html>
-  <head>
+ 
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <title>EES1</title>   
-     <meta name="viewport" content="width=device-width, initial-scale=1">   
-      <link rel="stylesheet" href="../css/bootstrap.min.css">   
-      <link rel="stylesheet" href="../css/jquery-ui.css">      
-      
-  </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!--fontawesome icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <title>subir</title>
+    <!-- jquery-->
+    <script src="../Jquery/jquery-2.1.3.min.js"></script>
+    <link rel="stylesheet" href="stylefondo.css">
+    
+
+</head>
   <body>
         <div class="container">
             <div class="row align-items-center p-4">

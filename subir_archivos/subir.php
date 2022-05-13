@@ -20,7 +20,7 @@ $carpeta='archivos';
   if(is_dir($carpeta)){
 	  if($dir = opendir($carpeta)){
 		  while(($archivo = readdir($dir)) !== false){
-			  if($archivo != '.' && $archivo != '..' && $archivo != 'repositorio' ){
+			  if($archivo != '.' && $archivo != '..' ){
 				   $cantidad=$cantidad+1;
 				   $dyn_table= "<table id='TablaError'class='table table-striped'>";
 				   $dyn_table.="<tr><td><a class='btn btn-outline-primary' href='".$carpeta.'/'.$archivo."'>".$archivo." "."<i class='fas fa-arrow-circle-down'></i></a><td>";
@@ -55,7 +55,7 @@ $carpeta='archivos';
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <title>subir</title>
     <!-- jquery-->
-    <script src="lib/jquery.js"></script>
+    <script src="../Jquery/jquery.js"></script>
     <link rel="stylesheet" href="stylefondo.css">
     
     <script>
@@ -121,8 +121,7 @@ $carpeta='archivos';
                         <button type="button" class="list-group-item list-group-item-info">Subir Archivo</button>
                     </div>
                     <form action="file.php" method="post" enctype="multipart/form-data">
-                        <input type="text" value="nticx" id="asignatura" name="asignatura" hidden></input>
-                        <input type="file" name="archivo" id="archivo" class="p-2 mb-4"></input>
+                         <input type="file" name="archivo" id="archivo" class="p-2 mb-4"></input>
                         <input type="submit" value="Subir" class="p-2 mb-4" id="upload"></input>
                         <div class="w-50 p-1">
                             <img src="../img/loading.gif" id="loading" class="img-thumbnail" alt="Responsive image">
@@ -136,30 +135,16 @@ $carpeta='archivos';
                         <button type="button" class="list-group-item list-group-item-success ">Ver</button>
                     </div>
                     <form action="" method="post" class="p-2 mb-4">
-                        <input type="text" value="nticx" id="carpeta" name="carpeta" hidden></input>
-                        <input type="submit" value="Ver contenido " class="p-2 mb-4"></input>
+                       <input type="submit" value="Ver contenido " class="p-2 mb-4"></input>
                     </form>
 
 
-                    <?php
-								// listado de archivos 
-                         //$carpeta=$_POST['carpeta'];
-
-						 if(isset($_POST['carpeta'])){
-						 
-                        
-								if($_POST['carpeta']!='nticx'){
-												//no muestra contenido
-												// echo $carpeta;
-									}else{
-							
-										$direccion= "../archivos";  
+                    <?php						 
+                        $direccion= "../archivos/";  
 															
-										echo "Archivos de: ".$carpeta;         
-										echo listar_archivos($direccion);
-                        	}
-
-						}
+                        echo "Archivos de: ".$carpeta;         
+                        echo listar_archivos($direccion);
+                        
                         ?>
 
                 </div>
