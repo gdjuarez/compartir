@@ -52,19 +52,16 @@
         </div>
     </div>
 
-    <div class="container bg-light rounded">
+    <div class="container bg-light border rounded">
+        <br>
         <div class="row">
             <div class="col-md-3"></div>
-            <div class="col-md-3">
+            <div class="col-md-6">
                 <form class="form-inline" action="recibir_archivos/frmDescargarAct.php" method="post">
-                    <button class="btn btn-info btn-lg" type="submit">DESCARGAR</button>
+                    <button class="btn btn-block btn-success btn-lg" type="submit">DESCARGAR</button>
                 </form>
             </div>
-            <div class="col-md-3">
-                <form class="form-inline" action="subir_archivos/subir.php" method="post">
-                        <button class="btn btn-outline-danger btn-lg" type="submit">SUBIR</button>
-                </form>
-            </div>
+           
             <div class="col-md-3"></div>
         </div>
 
@@ -86,12 +83,16 @@
                         <p align="center">Escuela de Educación Secundaria n°1</p>
                         <p align="center">calle 47 esq. 30, Mercedes (B) </p>
                     </div>
+                    <form class="form-inline" action="login.php" method="post">                       
+                        <input type="text"  value="" name="profesor" placeholder="clave">
+                        <button class="btn btn-info btn-lg" type="submit">PROFESOR</button>
+                     </form>
 
                     <footer>
                         <HR>
                         <small>© Copyright 2022, GDJuarez (Ematp Informatica)</small>
                     </footer>
-
+                   
                 </div>
 
 

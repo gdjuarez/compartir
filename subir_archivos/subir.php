@@ -1,15 +1,5 @@
 <?php
-/*
-session_start();
-if($_SESSION['logged'] == 'yes')
-{
-	//echo 'Usuario: '.$_SESSION['user'];	
-}else{
-	echo 'No te has logeado, inicia sesion.';	
-	header("Location: ../index.php"); 
 
-}
-*/
 
 	//NO MUESTRA ERROR al cargar
 error_reporting(error_reporting() & ~E_NOTICE);
