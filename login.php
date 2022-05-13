@@ -15,7 +15,7 @@ echo $profesor;
   }else{
       
 	echo '<script language=javascript>
-		  alert("Usuario y/o clave, son incorrectos")
+		  alert("La clave, ses incorrecta")
 		  self.location = "index.php"</script>';										
   }
   
