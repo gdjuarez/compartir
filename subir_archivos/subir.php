@@ -8,7 +8,8 @@ if($_SESSION['logged'] == 'yes')
 	echo 'No te has logeado, inicia sesion.';	
 	header("Location: ../index.php"); 
 
-}*/
+}
+*/
 
 	//NO MUESTRA ERROR al cargar
 error_reporting(error_reporting() & ~E_NOTICE);
@@ -148,6 +149,10 @@ $carpeta='archivos';
                         ?>
 
                 </div>
+                <hr>
+               <footer>
+                     <small>&copy; Copyright 2022,ematp- GDJuarez</small>
+               </footer>
             </div>
 
 
