@@ -5,8 +5,8 @@ $profesor='';
 $profesor=$_POST['profesor'];
 
 echo $profesor;
-
- if($profesor=="E4730") 
+//esto es sin bade de datos 
+ if($profesor=="aqui la clave") 
  {
 	$_SESSION['logged'] = 'yes';
 
